@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3!!=ggaj2qo^v+wcs#l0=%jz)nx@^hg@j%fs@6k8n+s&rr$dqg'
+SECRET_KEY = 'django-insecure-0x_&5ul%q+w^dj#@q-8ulk@bj!zm6a=kxz-p8*8%q#k-v@kwuv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig', # Custom app
+    'paginas.apps.PaginasConfig', # Páginas
+    'banco.apps.BancoConfig', # Banco de dados
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'principal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
