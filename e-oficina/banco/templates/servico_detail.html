@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>{{ servico.carro }}</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h5>Sobre o serviço:</h5>
+        <p>{{ servico.descricao }}</p>
+        <br>
+        <h5>Imagem do serviço:</h5>
+        <img src="{{ servico.imagem }}" alt="{{ servico.carro }}" class="img-fluid">
+    </div>
+</div>
+{% endblock page_content %}
