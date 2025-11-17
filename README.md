@@ -60,3 +60,9 @@ TEMPLATES = [
 e-oficina/python manage.py makemigrations banco
 e-oficina/python manage.py migrate banco
 ```
+
+## Carregar imagens para banco de dados
+
+```sh
+e-oficina/python manage.py carregar_imagens
+```
