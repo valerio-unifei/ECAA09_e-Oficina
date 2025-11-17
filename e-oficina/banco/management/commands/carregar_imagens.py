@@ -21,7 +21,7 @@ class Command(BaseCommand):
         self.stdout.write(f"Imagens encontradas: {len(lista_imagens)}")
 
         for i, caminho in enumerate(lista_imagens):
-            nome_arquivo = Path('images') / 'danos' / caminho.name
+            nome_arquivo = f'/static/images/danos/{caminho.name}'
             if Servico.objects.filter(imagem=nome_arquivo).exists():
                 self.stdout.write(self.style.WARNING(f"Servico '{nome_arquivo}' já existe. Pulando."))
                 continue
