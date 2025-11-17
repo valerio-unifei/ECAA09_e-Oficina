@@ -4,19 +4,23 @@ Gestor de oficinas credenciadas e clientes.
 Baseado no projeto:
 [Get Started With Django: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
 
-## Comandos
+## Cria projeto base Django
 
 ```sh
 pip install django
 mkdir e-oficina
 e-oficina/django-admin startproject principal .
+```
+
+## Cria aplicações do projeto
+
+```sh
 e-oficina/python manage.py startapp paginas
 e-oficina/python manage.py startapp banco
-e-oficina/python manage.py makemigrations banco
-e-oficina/python manage.py migrate banco
 ```
 
 ### principal/settings.py
+
 ```python
 INSTALLED_APPS = [
     'paginas.apps.PaginasConfig', # Páginas
@@ -50,3 +54,9 @@ TEMPLATES = [
 ```
 
 
+## Monta banco de dados após modelo definido no app banco
+
+```sh
+e-oficina/python manage.py makemigrations banco
+e-oficina/python manage.py migrate banco
+```
